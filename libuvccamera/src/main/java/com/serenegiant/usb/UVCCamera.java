@@ -1040,7 +1040,7 @@ public class UVCCamera {
 
     private static final native int nativeSetPreviewSize(final long id_camera, final int width, final int height, final int min_fps, final int max_fps, final int mode, final float bandwidth);
     private static final native String nativeGetSupportedSize(final long id_camera);
-    private static final native int nativeStartPreview(final long id_camera);
+    private static final native int nativeStartPreview(final long id_camera); //SEAN this is where the java meets the c++
     private static final native int nativeStopPreview(final long id_camera);
     private static final native int nativeSetPreviewDisplay(final long id_camera, final Surface surface);
     private static final native int nativeSetFrameCallback(final long mNativePtr, final IFrameCallback callback, final int pixelFormat);
