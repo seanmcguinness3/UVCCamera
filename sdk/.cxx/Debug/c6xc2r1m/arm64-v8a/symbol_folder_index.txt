@@ -1,0 +1,1 @@
+C:\AndroidApps\UVCCamera\sdk\build\intermediates\cxx\Debug\c6xc2r1m\obj\arm64-v8a

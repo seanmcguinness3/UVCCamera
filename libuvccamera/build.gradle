@@ -92,4 +92,5 @@ dependencies {
 	implementation("com.serenegiant:common:${commonLibVersion}") {
 		exclude module: 'support-v4'
 	}
+    implementation project(path: ':sdk')
 }

@@ -7,6 +7,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.main.iml" filepath="$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sdk/UVCCamera.sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/sdk/UVCCamera.sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sdk/UVCCamera.sdk.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sdk/UVCCamera.sdk.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sdk/UVCCamera.sdk.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sdk/UVCCamera.sdk.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sdk/UVCCamera.sdk.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sdk/UVCCamera.sdk.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usbCameraCommon/UVCCamera.usbCameraCommon.iml" filepath="$PROJECT_DIR$/.idea/modules/usbCameraCommon/UVCCamera.usbCameraCommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usbCameraCommon/UVCCamera.usbCameraCommon.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/usbCameraCommon/UVCCamera.usbCameraCommon.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/usbCameraCommon/UVCCamera.usbCameraCommon.main.iml" filepath="$PROJECT_DIR$/.idea/modules/usbCameraCommon/UVCCamera.usbCameraCommon.main.iml" />

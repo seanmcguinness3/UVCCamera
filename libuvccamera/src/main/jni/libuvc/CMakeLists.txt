@@ -41,6 +41,7 @@ SET(SOURCES src/ctrl.c src/device.c src/diag.c
            src/frame.c src/init.c src/stream.c
            src/misc.c)
 
+
 include_directories(
   ${libuvc_SOURCE_DIR}/include
   ${libuvc_BINARY_DIR}/include

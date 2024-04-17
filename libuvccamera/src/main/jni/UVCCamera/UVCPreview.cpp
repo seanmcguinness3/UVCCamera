@@ -25,6 +25,7 @@
 #include <stdlib.h>
 #include <linux/time.h>
 #include <unistd.h>
+#include <opencv2/core.hpp>
 
 #if 1	// set 1 if you don't need debug log
 	#ifndef LOG_NDEBUG
@@ -529,7 +530,8 @@ void UVCPreview::do_preview(uvc_stream_ctrl_t *ctrl) {
 			for ( ; LIKELY(isRunning()) ; ) {
 				frame_mjpeg = waitPreviewFrame();
 				if (LIKELY(frame_mjpeg)) {
-					frame = get_frame(frame_mjpeg->width * frame_mjpeg->height * 2);
+					frame = get_frame(frame_mjpeg->width * frame_mjpeg->height * 2); //SEAN trying to call the open cv functions here
+                    //cv::Mat orig_mat(frame_mjpeg->height, frame_mjpeg->width, CV_8UC2, frame)
 					result = uvc_mjpeg2yuyv(frame_mjpeg, frame);   // MJPEG => yuyv
 					recycle_frame(frame_mjpeg);
 					if (LIKELY(!result)) {

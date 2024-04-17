@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "C:\\AndroidApps\\UVCCamera\\sdk\\libcxx_helper\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\AndroidApps\\UVCCamera\\sdk\\.cxx\\Debug\\c6xc2r1m\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\AndroidApps\\UVCCamera\\sdk\\.cxx\\Debug\\c6xc2r1m\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "opencv_jni_shared::@6890427a1f51a3e7e1df": {
+      "artifactName": "opencv_jni_shared",
+      "abi": "x86",
+      "output": "C:\\AndroidApps\\UVCCamera\\sdk\\.cxx\\Debug\\c6xc2r1m\\x86\\libopencv_jni_shared.a",
+      "runtimeFiles": []
+    }
+  }
+}

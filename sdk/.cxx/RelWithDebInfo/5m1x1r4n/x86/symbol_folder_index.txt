@@ -1,0 +1,1 @@
+C:\AndroidApps\UVCCamera\sdk\build\intermediates\cxx\RelWithDebInfo\5m1x1r4n\obj\x86
