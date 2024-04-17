@@ -6,6 +6,7 @@ include $(PROJ_PATH)/libjpeg-turbo-1.5.0/Android.mk
 include $(PROJ_PATH)/libusb/android/jni/Android.mk
 include $(PROJ_PATH)/libuvc/android/jni/Android.mk
 
+//ROB READ HERE: I added the lines below to try to get it to find openCV
 CVROOT := C:/AndroidApps/UVCCamera/sdk/native/jni
 
 OPENCV_INSTALL_MODULES:=on

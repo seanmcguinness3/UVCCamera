@@ -25,7 +25,8 @@
 #include <stdlib.h>
 #include <linux/time.h>
 #include <unistd.h>
-#include <opencv2/core.hpp>
+//#include <opencv2/core.hpp>
+//ROB READ HERE with this line uncommented you can't build the project anymore
 
 #if 1	// set 1 if you don't need debug log
 	#ifndef LOG_NDEBUG
@@ -530,6 +531,10 @@ void UVCPreview::do_preview(uvc_stream_ctrl_t *ctrl) {
 			for ( ; LIKELY(isRunning()) ; ) {
 				frame_mjpeg = waitPreviewFrame();
 				if (LIKELY(frame_mjpeg)) {
+                    //ROB READ HERE: This is where I'm hoping that I can pass frame into a cv::Mat.
+                    //Sean: frame comes in a mjpeg, gets converted to yuyv.
+                    //https://answers.opencv.org/question/218054/placing-uyvy-data-in-a-mat-c/
+                    //^^Looks like yuyv can be converted to a cv::Mat
 					frame = get_frame(frame_mjpeg->width * frame_mjpeg->height * 2); //SEAN trying to call the open cv functions here
                     //cv::Mat orig_mat(frame_mjpeg->height, frame_mjpeg->width, CV_8UC2, frame)
 					result = uvc_mjpeg2yuyv(frame_mjpeg, frame);   // MJPEG => yuyv
