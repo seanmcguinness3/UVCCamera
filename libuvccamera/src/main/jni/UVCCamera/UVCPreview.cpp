@@ -43,7 +43,7 @@
 #include "UVCPreview.h"
 #include "libuvc_internal.h"
 
-#define	LOCAL_DEBUG 0
+#define	LOCAL_DEBUG 1
 #define MAX_FRAME 4
 #define PREVIEW_PIXEL_BYTES 4	// RGBA/RGBX
 #define FRAME_POOL_SZ MAX_FRAME + 2
@@ -109,6 +109,7 @@ UVCPreview::~UVCPreview() {
  * and you may need to confirm the size
  */
 uvc_frame_t *UVCPreview::get_frame(size_t data_bytes) {
+	LOGW("get_frame called"); //SEAN this gets called every frame
 	uvc_frame_t *frame = NULL;
 	pthread_mutex_lock(&pool_mutex);
 	{
@@ -118,7 +119,7 @@ uvc_frame_t *UVCPreview::get_frame(size_t data_bytes) {
 	}
 	pthread_mutex_unlock(&pool_mutex);
 	if UNLIKELY(!frame) {
-		LOGW("allocate new frame");
+		LOGW("allocate new frame THIS AIN'T GETTING CALLED");
 		frame = uvc_allocate_frame(data_bytes);
 	}
 	return frame;
@@ -528,6 +529,8 @@ void UVCPreview::do_preview(uvc_stream_ctrl_t *ctrl) {
 #endif
 		if (frameMode) {
 			// MJPEG mode
+			// SEAN  pretty sure it's running in MJPEG MODE
+			// So the LIKELY(x) is #defined, it just evaluates to x
 			for ( ; LIKELY(isRunning()) ; ) {
 				frame_mjpeg = waitPreviewFrame();
 				if (LIKELY(frame_mjpeg)) {
@@ -538,10 +541,12 @@ void UVCPreview::do_preview(uvc_stream_ctrl_t *ctrl) {
 					frame = get_frame(frame_mjpeg->width * frame_mjpeg->height * 2); //SEAN trying to call the open cv functions here
                     //cv::Mat orig_mat(frame_mjpeg->height, frame_mjpeg->width, CV_8UC2, frame)
 					result = uvc_mjpeg2yuyv(frame_mjpeg, frame);   // MJPEG => yuyv
+					LOGW("does this get called?");
 					recycle_frame(frame_mjpeg);
-					if (LIKELY(!result)) {
+					if (LIKELY(!result)) {  //SEAN result = true just means there was an error in start streaming
 						frame = draw_preview_one(frame, &mPreviewWindow, uvc_any2rgbx, 4);
-						addCaptureFrame(frame);
+						addCaptureFrame(frame); //SEAN if you can convert frame to cv::mat then you can probably call analysis here
+
 					} else {
 						recycle_frame(frame);
 					}

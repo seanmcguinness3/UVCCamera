@@ -235,6 +235,7 @@ static jint nativeStartPreview(JNIEnv *env, jobject thiz,
 		return camera->startPreview();
 	}
 	RETURN(JNI_ERR, jint);
+	//SEAN this is where the c++ gets called from the java
 }
 
 // プレビューを停止

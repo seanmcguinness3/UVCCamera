@@ -542,7 +542,7 @@ public final class CameraServer extends Handler {
 			}
 			@Override
 			public void onFrameAvailable() throws RemoteException {
-//				if (DEBUG) Log.d(TAG_THREAD, "onFrameAvailable:");
+				if (DEBUG) Log.d(TAG_THREAD, "onFrameAvailable:");
 				if (mVideoEncoder != null)
 					mVideoEncoder.frameAvailableSoon();
 			}
