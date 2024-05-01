@@ -260,6 +260,7 @@ abstract class AbstractUVCCameraHandler extends Handler {
 	}
 
 	public int setValue(final int flag, final int value) {
+		//sean this is archived in my repo. so I can duplicate this somewhere else, or just add in the library not as an .aar
 		checkReleased();
 		final CameraThread thread = mWeakThread.get();
 		final UVCCamera camera = thread != null ? thread.mUVCCamera : null;

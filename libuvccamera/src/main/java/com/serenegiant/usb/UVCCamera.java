@@ -565,6 +565,7 @@ public class UVCCamera {
     /**
      * @param brightness [%]
      */
+	//sean you just gotta duplicate this but for nativeSetExposureMode
 	public synchronized void setBrightness(final int brightness) {
     	if (mNativePtr != 0) {
  		   final float range = Math.abs(mBrightnessMax - mBrightnessMin);

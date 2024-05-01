@@ -350,7 +350,8 @@ public final class MainActivity extends BaseActivity implements CameraDialog.Cam
 		return mCameraHandler != null ? mCameraHandler.getValue(flag) : 0;
 	}
 
-	private int setValue(final int flag, final int value) {
+	private int setValue(final int flag, final int value) {//i don't think this'll work for exposure
+		//because this function only has brightness and contrast defined.
 		return mCameraHandler != null ? mCameraHandler.setValue(flag, value) : 0;
 	}
 
