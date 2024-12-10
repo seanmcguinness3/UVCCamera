@@ -260,10 +260,20 @@ abstract class AbstractUVCCameraHandler extends Handler {
 	}
 
 	public int setValue(final int flag, final int value) {
-		//sean this is archived in my repo. so I can duplicate this somewhere else, or just add in the library not as an .aar
+
 		checkReleased();
 		final CameraThread thread = mWeakThread.get();
 		final UVCCamera camera = thread != null ? thread.mUVCCamera : null;
+
+		Log.i(TAG, "made it to setValue 1, camera = ");//DELETE
+		Log.i(TAG, String.valueOf(camera));//DELETE
+
+		Log.i(TAG, "made it to setValue 1, thread = ");//DELETE
+		Log.i(TAG, String.valueOf(thread));//DELETE
+
+		Log.i(TAG, "made it to setValue 1, thread.mUVCCamera = ");//DELETE
+		Log.i(TAG, String.valueOf(thread.mUVCCamera));//DELETE
+
 		if (camera != null) {
 			if (flag == UVCCamera.PU_BRIGHTNESS) {
 				camera.setBrightness(value);

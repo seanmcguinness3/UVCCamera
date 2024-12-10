@@ -171,7 +171,7 @@ public class CameraDialog extends DialogFragment {
 			switch (which) {
 			case DialogInterface.BUTTON_POSITIVE:
 				final Object item = mSpinner.getSelectedItem();
-				if (item instanceof UsbDevice) {
+				if (item instanceof UsbDevice) {//PERMISSION BUG wondering when this gets called.
 					mUSBMonitor.requestPermission((UsbDevice)item);
 					((CameraDialogParent)getActivity()).onDialogResult(false);
 				}
