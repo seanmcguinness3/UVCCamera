@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/UVCCamera.iml" filepath="$PROJECT_DIR$/UVCCamera.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.iml" filepath="$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.main.iml" filepath="$PROJECT_DIR$/.idea/modules/libuvccamera/UVCCamera.libuvccamera.main.iml" />
